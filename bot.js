@@ -47,10 +47,10 @@ app.post('/webhook', bot_middleware, (req, res, next) => {
     // We process payment if user says "チョコレート".
     if (event.type === 'message') {
       if (event.message.text === 'チョコレート') {
-        let product_name = 'チョコレート';
+        let product_name = `洗顔・化粧水の2STEPBASICコース`;
         let reservation = {
           productName: product_name,
-          amount: 1,
+          amount: 500,
           currency: 'JPY',
           orderId: uuid(),
           confirmUrl: process.env.LINE_PAY_CONFIRM_URL,
